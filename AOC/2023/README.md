@@ -8,6 +8,8 @@
 
 ## Usage
 
+Make sure to have your environment properly configured for OCaml, by following the official [guide][ocaml-guide].
+
 ```console
 $ dune build
 $ dune exec AOC
@@ -24,11 +26,6 @@ Released under [MIT][license-url] by [@gersonfaneto][profile-url].
 
 [profile-url]: https://github.com/gersonfaneto
 
-[commits-url]: https://github.com/gersonfaneto/Codeground/commit/main
 [license-url]: https://github.com/gersonfaneto/Codeground/blob/main/LICENSE
-[stars-url]: https://github.com/gersonfaneto/Codeground/stargazers
 
-[commits-shield]: https://img.shields.io/github/last-commit/gersonfaneto/Codeground?color=blue&style=for-the-badge&logo=git
-[license-shield]: https://img.shields.io/github/license/gersonfaneto/Codeground?color=blue&style=for-the-badge
-[stars-shield]: https://img.shields.io/github/stars/gersonfaneto/Codeground?color=blue&style=for-the-badge&logo=github
-[solutions-shield]: https://img.shields.io/static/v1?label=SOLVED&message=244&color=informational&style=for-the-badge&logo=checkmarx
+[ocaml-guide]: https://ocaml.org/docs/installing-ocaml
