@@ -1,4 +1,4 @@
-(executable
- (public_name AOC)
- (name main)
- (libraries utils core))
+(executables
+ (public_names AOC One)
+ (names main one)
+ (libraries utils core fmt))
