@@ -11,12 +11,8 @@
 Make sure to have your environment properly configured for OCaml, by following the official [guide][ocaml-guide].
 
 ```console
-$ dune build
 $ dune exec AOC
 ```
-
-> [!NOTE]  
-> The `dune exec AOC` should guide you through the rest...
 
 ## License
 
