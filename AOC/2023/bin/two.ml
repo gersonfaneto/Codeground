@@ -5,7 +5,7 @@ open Core
 let () = Printf.printf "\nAdvent of Code - Day Two\n"
 
 let () =
-  let lines = Utils.read_lines "inputs/02-01.txt" in
+  let lines = Utils.read_lines "inputs/02.txt" in
   Printf.printf " Part I\n";
   List.foldi lines ~init:0 ~f:(fun idx acc line ->
     let game = String.split line ~on:':' |> List.last_exn |> String.strip in
@@ -46,7 +46,7 @@ let filter_by_color pairs color =
 ;;
 
 let () =
-  let lines = Utils.read_lines "inputs/02-01.txt" in
+  let lines = Utils.read_lines "inputs/02.txt" in
   Printf.printf " Part I\n";
   List.fold lines ~init:0 ~f:(fun acc line ->
     let game = String.split line ~on:':' |> List.last_exn |> String.strip in

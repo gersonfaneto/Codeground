@@ -5,7 +5,7 @@ open Core
 let () = Printf.printf "\nAdvent of Code - Day One\n"
 
 let () =
-  let lines = Utils.read_lines "inputs/01-01.txt" in
+  let lines = Utils.read_lines "inputs/01.txt" in
   Printf.printf "   Part I\n";
   List.fold lines ~init:0 ~f:(fun acc line ->
     let chars = String.to_list line in
@@ -53,7 +53,7 @@ let str_to_numbers str =
 ;;
 
 let () =
-  let lines = Utils.read_lines "inputs/01-02.txt" in
+  let lines = Utils.read_lines "inputs/01.txt" in
   Printf.printf "   Part II\n";
   List.fold lines ~init:0 ~f:(fun acc line ->
     let numbers = str_to_numbers line in
