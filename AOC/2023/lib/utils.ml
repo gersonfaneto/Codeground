@@ -10,6 +10,9 @@ let read_lines filename =
   aux []
 ;;
 
+let print_list list =
+  List.iter (fun x -> print_endline x) list
+
 let reverse_string str =
   let rec aux idx =
     match idx with
