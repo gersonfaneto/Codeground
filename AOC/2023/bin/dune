@@ -1,4 +1,5 @@
 (executables
- (public_names AOC One Two)
- (names main one two)
- (libraries utils core re))
+ (public_names AOC One Two Three)
+ (names main one two three)
+ (libraries utils core re str fmt)
+ (preprocess (pps ppx_deriving.show ppx_deriving.ord)))

@@ -10,8 +10,7 @@ let read_lines filename =
   aux []
 ;;
 
-let print_list list =
-  List.iter (fun x -> print_endline x) list
+let print_list list = List.iter (fun x -> print_endline x) list
 
 let reverse_string str =
   let rec aux idx =
@@ -27,3 +26,5 @@ let is_digit char =
   | '0' .. '9' -> true
   | _ -> false
 ;;
+
+let directions = [ -1, -1; 0, -1; 1, -1; -1, 0; 1, 0; -1, 1; 0, 1; 1, 1 ]
