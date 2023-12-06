@@ -84,3 +84,34 @@ let () =
   Printf.printf "   Answer: %d\n" result;
   assert true
 ;;
+
+(* Day One - Part II *)
+
+let get_gears_from_line line row =
+  let chars = String.to_list line in
+  List.filter_mapi chars ~f:(fun column value ->
+    match value with
+    | '*' -> Some { row; column }
+    | _ -> None)
+;;
+
+let () =
+  let lines = Utils.read_lines "inputs/03.txt" in
+  Printf.printf " Part I\n";
+  let gears = acc_from_lines lines get_gears_from_line in
+  let parts = acc_from_lines lines get_parts_from_line in
+  let result =
+    List.fold gears ~init:0 ~f:(fun acc symbol ->
+      let matches =
+        List.fold parts ~init:PartSet.empty ~f:(fun set part ->
+          match Part.collides part symbol with
+          | Some _ -> PartSet.add part set
+          | None -> set)
+      in
+      match PartSet.cardinal matches with
+      | 2 -> acc + PartSet.fold (fun part acc -> acc * part.value) matches 1
+      | _ -> acc)
+  in
+  Printf.printf "   Answer: %d\n" result;
+  assert true
+;;
