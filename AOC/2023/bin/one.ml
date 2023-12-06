@@ -2,12 +2,12 @@
 
 open Core
 
-let () = Printf.printf "Advent of Code - Day One\n"
+let () = Printf.printf "\nAdvent of Code - Day One\n"
 
 let () =
-  let contents = Utils.read_lines "inputs/01-01.txt" in
+  let lines = Utils.read_lines "inputs/01-01.txt" in
   Printf.printf "   Part I\n";
-  List.fold contents ~init:0 ~f:(fun acc line ->
+  List.fold lines ~init:0 ~f:(fun acc line ->
     let chars = String.to_list line in
     let digits = List.filter chars ~f:Utils.is_digit in
     let number = Format.sprintf "%c%c" (List.hd_exn digits) (List.last_exn digits) in
@@ -41,8 +41,8 @@ let literals =
 ;;
 
 let map_to_digit str pos =
-  List.find_map literals ~f:(fun (substr, value) ->
-    match String.substr_index ~pos str ~pattern:substr with
+  List.find_map literals ~f:(fun (literal, value) ->
+    match String.substr_index ~pos str ~pattern:literal with
     | Some matched when matched = pos -> Some value
     | _ -> None)
 ;;
@@ -53,13 +53,12 @@ let str_to_numbers str =
 ;;
 
 let () =
-  let contents = Utils.read_lines "inputs/01-02.txt" in
+  let lines = Utils.read_lines "inputs/01-02.txt" in
   Printf.printf "   Part II\n";
-  List.fold contents ~init:0 ~f:(fun acc line ->
+  List.fold lines ~init:0 ~f:(fun acc line ->
     let numbers = str_to_numbers line in
     let number = Printf.sprintf "%s%s" (List.hd_exn numbers) (List.last_exn numbers) in
     let number = Int.of_string number in
     acc + number)
   |> Printf.printf "       Answer: %d\n"
 ;;
-
