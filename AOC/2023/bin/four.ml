@@ -34,3 +34,18 @@ let () =
 ;;
 
 (* Day Four - Part II *)
+
+let () =
+  let lines = Utils.read_lines "inputs/04.txt" in
+  let extras = Array.create ~len:(List.length lines) 1 in
+  Printf.printf " Part I\n";
+  List.iteri lines ~f:(fun idx line ->
+    let game = String.split line ~on:':' |> List.last_exn |> String.strip in
+    let winning_numbers = String.split game ~on:'|' |> List.hd_exn |> get_numbers_from_string in
+    let our_numbers = String.split game ~on:'|' |> List.last_exn |> get_numbers_from_string in
+    let matches = IntSet.inter winning_numbers our_numbers |> IntSet.cardinal in
+    for i = 0 to matches - 1 do
+      extras.(idx + i + 1) <- extras.(idx + i + 1) + extras.(idx)
+    done);
+  Array.fold extras ~init:0 ~f:(fun acc x -> acc + x) |> Printf.printf "       Answer: %d\n"
+;;
