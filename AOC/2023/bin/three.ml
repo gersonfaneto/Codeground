@@ -69,7 +69,7 @@ let acc_from_lines lines getter =
 let () = Printf.printf "\nAdvent of Code - Day Three\n"
 
 let () =
-  let lines = Utils.read_lines "inputs/03.txt" in
+  let lines = Utils.read_lines "input.txt" in
   Printf.printf " Part I\n";
   let symbols = acc_from_lines lines get_symbols_from_line in
   let parts = acc_from_lines lines get_parts_from_line in
@@ -96,7 +96,7 @@ let get_gears_from_line line row =
 ;;
 
 let () =
-  let lines = Utils.read_lines "inputs/03.txt" in
+  let lines = Utils.read_lines "input.txt" in
   Printf.printf " Part I\n";
   let gears = acc_from_lines lines get_gears_from_line in
   let parts = acc_from_lines lines get_parts_from_line in

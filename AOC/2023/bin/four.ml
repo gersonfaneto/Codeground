@@ -29,7 +29,7 @@ let get_game_from_line line =
 let () = Printf.printf "\nAdvent of Code - Day Four\n"
 
 let () =
-  let lines = Utils.read_lines "inputs/04.txt" in
+  let lines = Utils.read_lines "input.txt" in
   Printf.printf " Part I\n";
   List.foldi lines ~init:0 ~f:(fun idx acc line ->
     let winning_numbers, our_numbers = get_game_from_line line in
@@ -41,7 +41,7 @@ let () =
 (* Day Four - Part II *)
 
 let () =
-  let lines = Utils.read_lines "inputs/04.txt" in
+  let lines = Utils.read_lines "input.txt" in
   let extras = Array.create ~len:(List.length lines) 1 in
   Printf.printf " Part I\n";
   List.iteri lines ~f:(fun idx line ->
