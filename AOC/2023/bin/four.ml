@@ -31,7 +31,7 @@ let () = Printf.printf "\nAdvent of Code - Day Four\n"
 let () =
   let lines = Utils.read_lines "input.txt" in
   Printf.printf " Part I\n";
-  List.foldi lines ~init:0 ~f:(fun idx acc line ->
+  List.fold lines ~init:0 ~f:(fun acc line ->
     let winning_numbers, our_numbers = get_game_from_line line in
     let matches = IntSet.inter winning_numbers our_numbers |> IntSet.cardinal in
     acc + Int.shift_left 1 (matches - 1))
