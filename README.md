@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 ```markdown
   ____          _                                      _ 
  / ___|___   __| | ___  __ _ _ __ ___  _   _ _ __   __| |    
@@ -13,9 +14,13 @@
 
 ## License
 
+<!-- prettier-ignore-start -->
+
 Released under [MIT][license-url] by [@gersonfaneto][profile-url].
 
 <!-- NOTE: Links... -->
 
 [profile-url]: https://github.com/gersonfaneto
 [license-url]: https://github.com/gersonfaneto/Codeground/blob/main/LICENSE
+
+<!-- prettier-ignore-end -->
