@@ -8,9 +8,19 @@
                        |___/                             
 ```
 
-<div align="center">
+## Guide
 
-</div>
+```bash
+.
+├── AOC # Advent of Code - https://adventofcode.com/
+│  └── 2023
+├── BC # beecrowd - https://beecrowd.com/
+│  ├── C
+│  ├── Python
+│  └── SQL
+├── LICENSE
+└── README.md
+```
 
 ## License
 
